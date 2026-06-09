@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pedir Cita - Clínica Dental Tornel</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#0060ac",
+                        "surface": "#f8f9fa",
+                        "surface-tint": "#4f6073",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#38485a",
+                        "outline-variant": "#c4c6cd",
+                        "secondary-fixed-dim": "#a4c9ff",
+                        "primary-fixed": "#d2e4fb",
+                        "primary-fixed-dim": "#b7c8de",
+                        "on-tertiary-fixed": "#141d22",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "outline": "#74777d",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-fixed-variant": "#3f484e",
+                        "on-primary-fixed": "#0b1d2d",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#003e73",
+                        "primary-container": "#1a2b3c",
+                        "tertiary-container": "#222b30",
+                        "inverse-primary": "#b7c8de",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#68abff",
+                        "on-surface-variant": "#44474c",
+                        "on-tertiary-container": "#899299",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8192a7",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed": "#001c39",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-error": "#ffffff",
+                        "tertiary": "#0e161b",
+                        "secondary-fixed": "#d4e3ff",
+                        "tertiary-fixed-dim": "#bfc8ce",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed": "#dbe4eb",
+                        "primary": "#041627",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary-fixed-variant": "#004883",
+                        "on-background": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "80px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Manrope"],
+                        "headline-xl": ["Montserrat"],
+                        "label-md": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body
+    class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-container flex flex-col min-h-screen">
+    <!-- TopAppBar -->
+    <header
+        class="bg-surface/90 dark:bg-primary/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none">
+        <div
+            class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+            <!-- Brand Logo -->
+            <a aria-label="Logotipo Clínica Dental Tornel"
+                class="text-headline-md font-headline-md font-bold text-primary dark:text-secondary-fixed flex items-center gap-2"
+                href="#">
+                <span class="material-symbols-outlined text-secondary"
+                    style="font-variation-settings: 'FILL' 1;">dentistry</span>
+                Clínica Dental Tornel
+            </a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-label-md font-label-md text-on-surface-variant dark:text-on-primary-container hover:text-secondary hover:bg-surface-container-highest dark:hover:bg-primary-container transition-all px-3 py-2 rounded-md"
+                    href="../index.html">Inicio</a>
+                <a class="text-label-md font-label-md text-on-surface-variant dark:text-on-primary-container hover:text-secondary hover:bg-surface-container-highest dark:hover:bg-primary-container transition-all px-3 py-2 rounded-md"
+                    href="../servicios/Index.html">Servicios</a>
+                <a class="text-label-md font-label-md text-on-surface-variant dark:text-on-primary-container hover:text-secondary hover:bg-surface-container-highest dark:hover:bg-primary-container transition-all px-3 py-2 rounded-md"
+                    href="../nosotros/Index.html">La Clínica</a>
+            </nav>
+            <!-- Trailing Action -->
+            <a href="../cita/Index.html"
+                class="hidden md:flex items-center justify-center bg-secondary text-white rounded-full px-6 py-2.5 text-label-md font-label-md hover:bg-secondary/90 transition-colors shadow-sm">
+                Pedir Cita
+            </a>
+            <!-- Mobile Menu Toggle (Visual Only) -->
+            <button class="md:hidden text-primary p-2 mobile-menu-btn">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex-grow w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-section-padding">
+        <!-- Page Header -->
+        <div class="mb-12 text-center md:text-left max-w-2xl">
+            <h1 class="text-headline-xl font-headline-xl text-primary mb-4">Agenda tu visita</h1>
+            <p class="text-body-lg font-body-lg text-on-surface-variant">Selecciona el tratamiento y el horario que
+                mejor se adapte a ti. Nuestro equipo te espera en un entorno diseñado para tu tranquilidad.</p>
+        </div>
+        <!-- Layout Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+            <!-- Booking Form Column (Span 8) -->
+            <div
+                class="lg:col-span-8 bg-surface-container-lowest rounded-2xl shadow-[0_8px_20px_rgba(4,22,39,0.04)] border border-outline-variant/20 p-6 md:p-10 relative overflow-hidden">
+                <!-- Decorative element -->
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-primary-fixed/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none">
+                </div>
+                <form action="#" class="relative z-10 space-y-8" method="POST">
+                    <!-- Section 1: Treatment -->
+                    <div>
+                        <h2 class="text-headline-md font-headline-md text-primary mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary">medical_services</span>
+                            1. Selecciona el Tratamiento
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Option 1 -->
+                            <label
+                                class="relative flex cursor-pointer rounded-xl border border-outline-variant bg-surface p-4 hover:bg-surface-container-low transition-colors focus-within:ring-2 focus-within:ring-secondary">
+                                <input checked="" class="sr-only peer" name="treatment" type="radio" value="revision" />
+                                <div class="flex w-full items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-secondary">
+                                            <span class="material-symbols-outlined">health_and_safety</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-body-md font-body-md font-semibold text-primary">Revisión
+                                                General</p>
+                                            <p class="text-label-md font-label-md text-on-surface-variant">Consulta
+                                                diagnóstica</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-outline peer-checked:text-secondary opacity-0 peer-checked:opacity-100 transition-opacity">check_circle</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-secondary pointer-events-none transition-colors">
+                                </div>
+                            </label>
+                            <!-- Option 2 -->
+                            <label
+                                class="relative flex cursor-pointer rounded-xl border border-outline-variant bg-surface p-4 hover:bg-surface-container-low transition-colors focus-within:ring-2 focus-within:ring-secondary">
+                                <input class="sr-only peer" name="treatment" type="radio" value="limpieza" />
+                                <div class="flex w-full items-center justify-between">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-secondary">
+                                            <span class="material-symbols-outlined">water_drop</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-body-md font-body-md font-semibold text-primary">Limpieza
+                                                Dental</p>
+                                            <p class="text-label-md font-label-md text-on-surface-variant">Higiene
+                                                profesional</p>
+                                        </div>
+                                    </div>
+                                    <span
+                                        class="material-symbols-outlined text-outline peer-checked:text-secondary opacity-0 peer-checked:opacity-100 transition-opacity">check_circle</span>
+                                </div>
+                                <div
+                                    class="absolute inset-0 rounded-xl border-2 border-transparent peer-checked:border-secondary pointer-events-none transition-colors">
+                                </div>
+                            </label>
+                            <!-- Select Dropdown for Others -->
+                            <div class="sm:col-span-2 mt-2">
+                                <label class="sr-only" for="other_treatment">Otro tratamiento</label>
+                                <div class="relative">
+                                    <select
+                                        class="block w-full rounded-lg border-outline-variant py-3 pl-4 pr-10 text-body-md font-body-md text-on-surface focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary bg-surface appearance-none transition-colors"
+                                        id="other_treatment" name="other_treatment">
+                                        <option disabled="" selected="" value="">O selecciona otro tratamiento
+                                            específico...</option>
+                                        <option value="ortodoncia">Ortodoncia</option>
+                                        <option value="implantologia">Implantología</option>
+                                        <option value="estetica">Estética Dental</option>
+                                        <option value="urgencia">Urgencia (Dolor)</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                                        <span class="material-symbols-outlined text-outline">expand_more</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="border-outline-variant/30" />
+                    <!-- Section 2: Date & Time -->
+                    <div>
+                        <h2 class="text-headline-md font-headline-md text-primary mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary">calendar_month</span>
+                            2. Fecha y Hora Preferida
+                        </h2>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <!-- Date -->
+                            <div>
+                                <label class="block text-label-md font-label-md text-on-surface-variant mb-2"
+                                    for="date">Día deseado</label>
+                                <div class="relative">
+                                    <input
+                                        class="block w-full rounded-lg border-outline-variant py-3 px-4 text-body-md font-body-md text-on-surface focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary bg-surface transition-colors"
+                                        id="date" name="date" required="" type="date" />
+                                </div>
+                            </div>
+                            <!-- Time -->
+                            <div>
+                                <label class="block text-label-md font-label-md text-on-surface-variant mb-2"
+                                    for="time_preference">Preferencia horaria</label>
+                                <div class="relative">
+                                    <select
+                                        class="block w-full rounded-lg border-outline-variant py-3 pl-4 pr-10 text-body-md font-body-md text-on-surface focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary bg-surface appearance-none transition-colors"
+                                        id="time_preference" name="time_preference">
+                                        <option value="manana">Mañana (09:30 - 13:30)</option>
+                                        <option value="tarde">Tarde (16:30 - 20:30)</option>
+                                        <option selected="" value="indiferente">Indiferente</option>
+                                    </select>
+                                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                                        <span class="material-symbols-outlined text-outline">schedule</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="border-outline-variant/30" />
+                    <!-- Section 3: Patient Details -->
+                    <div>
+                        <h2 class="text-headline-md font-headline-md text-primary mb-4 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary">person</span>
+                            3. Tus Datos
+                        </h2>
+                        <div class="space-y-4">
+                            <div class="relative">
+                                <input
+                                    class="peer block w-full rounded-lg border-outline-variant bg-transparent px-4 pb-2.5 pt-5 text-body-md font-body-md text-on-surface focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary transition-colors"
+                                    id="name" name="name" placeholder=" " required="" type="text" />
+                                <label
+                                    class="absolute left-4 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-label-md font-label-md text-on-surface-variant duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-secondary"
+                                    for="name">Nombre y Apellidos</label>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="relative">
+                                    <input
+                                        class="peer block w-full rounded-lg border-outline-variant bg-transparent px-4 pb-2.5 pt-5 text-body-md font-body-md text-on-surface focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary transition-colors"
+                                        id="phone" name="phone" placeholder=" " required="" type="tel" />
+                                    <label
+                                        class="absolute left-4 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-label-md font-label-md text-on-surface-variant duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-secondary"
+                                        for="phone">Teléfono</label>
+                                </div>
+                                <div class="relative">
+                                    <input
+                                        class="peer block w-full rounded-lg border-outline-variant bg-transparent px-4 pb-2.5 pt-5 text-body-md font-body-md text-on-surface focus:border-secondary focus:outline-none focus:ring-1 focus:ring-secondary transition-colors"
+                                        id="email" name="email" placeholder=" " type="email" />
+                                    <label
+                                        class="absolute left-4 top-4 z-10 origin-[0] -translate-y-4 scale-75 transform text-label-md font-label-md text-on-surface-variant duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-secondary"
+                                        for="email">Email (Opcional)</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Submit Area -->
+                    <div class="pt-4 flex flex-col items-center gap-4">
+                        <button
+                            class="w-full sm:w-auto bg-secondary text-white rounded-full px-10 py-4 text-label-md font-label-md font-bold hover:bg-secondary/90 transition-all shadow-[0_4px_12px_rgba(0,96,172,0.2)] hover:shadow-[0_6px_16px_rgba(0,96,172,0.3)] hover:-translate-y-0.5"
+                            type="submit">
+                            Solicitar Cita
+                        </button>
+                        <p class="text-body-md font-body-md text-on-surface-variant italic flex items-center gap-2">
+                            <span class="material-symbols-outlined text-outline text-sm">info</span>
+                            Te llamaremos para confirmar tu cita.
+                        </p>
+                    </div>
+                </form>
+            </div>
+            <!-- Side Information Panel (Span 4) -->
+            <div class="lg:col-span-4 flex flex-col gap-6">
+                <!-- Contact & Location Card -->
+                <div class="bg-surface-container rounded-2xl p-6 border border-outline-variant/10">
+                    <h3 class="text-headline-md font-headline-md text-primary mb-4">La Clínica</h3>
+                    <div class="flex items-start gap-3 mb-6">
+                        <span class="material-symbols-outlined text-secondary mt-1">location_on</span>
+                        <div>
+                            <p class="text-body-md font-body-md font-semibold text-primary">Los Dolores, Murcia</p>
+                            <p class="text-body-md font-body-md text-on-surface-variant mt-1">Calle Mayor, 102<br />30011 Murcia</p>
+                        </div>
+                    </div>
+                    <!-- Map Placeholder -->
+                    <div class="w-full h-48 bg-surface-variant rounded-xl overflow-hidden relative mb-6">
+                        <img alt="Mapa de ubicación de la clínica en Los Dolores, Murcia"
+                            class="w-full h-full object-cover opacity-80 mix-blend-multiply"
+                            data-alt="A clean, minimalist vector-style map interface showing a specific location marked with a subtle, modern blue pin. The map style uses light grey and soft white tones, reflecting a clean, clinical, and corporate aesthetic. Streets are softly outlined, avoiding visual clutter, perfect for a high-end medical clinic contact page."
+                            data-location="Murcia"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv58b97hIN28-rD_nV9BWOMnmWHjWpe8RiDrboLKryh276J0J97m2Mc8KN5QA_NHa20IpoE-pmyu79gGJ-xiYh5T1mcvw1GCTeY9lpEBdW3L1KSZBf2qhGatm7B0JXFiHg1frWYmEL9WxUyjoKlYzXo3qZGsyLKjztiDJpq1hSEospHPWjD2mb500rgPI_dfGRiWdN8bLlj8Cf6MgYw8E0ZJ7MZzkDA1N4-2J93Zs3AL2IfR95VoxayxNqcmRj5YeJdPnUAVCziTY" />
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <a class="flex items-center gap-3 text-body-md font-body-md text-primary hover:text-secondary transition-colors group"
+                            href="tel:968348564">
+                            <div
+                                class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-secondary-container transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-on-surface-variant group-hover:text-on-secondary-container">call</span>
+                            </div>
+                            968 348 564
+                        </a>
+                        <a class="flex items-center gap-3 text-body-md font-body-md text-primary hover:text-secondary transition-colors group"
+                            href="mailto:info@clinicadentaltornel.com">
+                            <div
+                                class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center group-hover:bg-secondary-container transition-colors">
+                                <span
+                                    class="material-symbols-outlined text-on-surface-variant group-hover:text-on-secondary-container">mail</span>
+                            </div>
+                            info@clinicadentaltornel.com
+                        </a>
+                    </div>
+                </div>
+                <!-- Hours Card -->
+                <div class="bg-primary text-on-primary rounded-2xl p-6 relative overflow-hidden">
+                    <div class="absolute -right-4 -bottom-4 opacity-5">
+                        <span class="material-symbols-outlined text-[120px]">schedule</span>
+                    </div>
+                    <h3 class="text-headline-md font-headline-md text-white mb-6 relative z-10">Horario</h3>
+                    <ul class="space-y-4 relative z-10">
+                        <li class="flex justify-between items-center border-b border-on-primary/10 pb-2">
+                            <span class="text-body-md font-body-md text-on-primary-fixed-dim">Lunes - Viernes</span>
+                            <div class="text-right">
+                                <p class="text-body-md font-body-md font-semibold text-white">09:30 - 13:30</p>
+                                <p class="text-body-md font-body-md font-semibold text-white">16:30 - 20:30</p>
+                            </div>
+                        </li>
+                        <li class="flex justify-between items-center pt-2">
+                            <span class="text-body-md font-body-md text-on-primary-fixed-dim">Sábados y Domingos</span>
+                            <span
+                                class="text-label-md font-label-md bg-white/10 px-3 py-1 rounded-full text-white">Cerrado</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-tertiary w-full rounded-none">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-7xl mx-auto">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <span class="text-headline-sm font-headline-sm font-bold text-white flex items-center gap-2">
+                    <span class="material-symbols-outlined text-secondary"
+                        style="font-variation-settings: 'FILL' 1;">dentistry</span>
+                    Clínica Dental Tornel
+                </span>
+                <p
+                    class="text-body-md font-body-md text-on-primary dark:text-on-tertiary opacity-80 text-center md:text-left">
+                    © 2024 Clínica Dental Tornel. Los Dolores, Murcia. Todos los derechos reservados.
+                </p>
+            </div>
+            <nav class="flex flex-wrap justify-center gap-6 mt-6 md:mt-0">
+                <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white transition-colors hover:underline decoration-secondary-container opacity-80 duration-100 hover:scale-95"
+                    href="#">Política de Privacidad</a>
+                <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white transition-colors hover:underline decoration-secondary-container opacity-80 duration-100 hover:scale-95"
+                    href="#">Aviso Legal</a>
+                <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white transition-colors hover:underline decoration-secondary-container opacity-80 duration-100 hover:scale-95"
+                    href="#">Cookies</a>
+                <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white transition-colors hover:underline decoration-secondary-container opacity-80 duration-100 hover:scale-95 flex items-center gap-1"
+                    href="#">
+                    Instagram
+                    <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                </a>
+            </nav>
+        </div>
+    </footer>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-surface z-[100] hidden flex-col">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 border-b border-outline-variant/30">
+            <div class="flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined text-secondary text-[28px]" style="font-variation-settings: 'FILL' 1;">dentistry</span>
+                <span class="font-headline-md font-bold text-lg">Clínica Dental Tornel</span>
+            </div>
+            <button id="close-menu" class="text-primary p-2" aria-label="Cerrar menú">
+                <span class="material-symbols-outlined text-[32px]">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center flex-grow gap-8 p-6">
+            <a href="../index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Inicio</a>
+            <a href="../servicios/Index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Servicios</a>
+            <a href="../nosotros/Index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">La Clínica</a>
+            <a href="../cita/Index.html" class="mt-6 bg-secondary text-white px-10 py-4 rounded-full text-headline-md font-headline-md shadow-md">Pedir Cita</a>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openBtns = document.querySelectorAll('.mobile-menu-btn');
+            const closeBtn = document.getElementById('close-menu');
+            const menuLinks = mobileMenu.querySelectorAll('a');
+
+            openBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            const closeMenu = () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = '';
+            };
+
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nuestra Clínica - Clínica Dental Tornel</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind Config from Style Guidance -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#0060ac",
+                        "surface": "#f8f9fa",
+                        "surface-tint": "#4f6073",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#38485a",
+                        "outline-variant": "#c4c6cd",
+                        "secondary-fixed-dim": "#a4c9ff",
+                        "primary-fixed": "#d2e4fb",
+                        "primary-fixed-dim": "#b7c8de",
+                        "on-tertiary-fixed": "#141d22",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "outline": "#74777d",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-fixed-variant": "#3f484e",
+                        "on-primary-fixed": "#0b1d2d",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#003e73",
+                        "primary-container": "#1a2b3c",
+                        "tertiary-container": "#222b30",
+                        "inverse-primary": "#b7c8de",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#68abff",
+                        "on-surface-variant": "#44474c",
+                        "on-tertiary-container": "#899299",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8192a7",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed": "#001c39",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-error": "#ffffff",
+                        "tertiary": "#0e161b",
+                        "secondary-fixed": "#d4e3ff",
+                        "tertiary-fixed-dim": "#bfc8ce",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed": "#dbe4eb",
+                        "primary": "#041627",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary-fixed-variant": "#004883",
+                        "on-background": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "80px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Manrope"],
+                        "headline-xl": ["Montserrat"],
+                        "label-md": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Subtle float animation for cards */
+        @keyframes subtle-float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .hover-float:hover {
+            animation: subtle-float 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-secondary selection:text-white">
+    <!-- Shared Component: TopAppBar -->
+    <header
+        class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 w-full border-b border-outline-variant/30 shadow-sm">
+        <div
+            class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+            <!-- Brand -->
+            <a class="flex items-center gap-2 group" href="#">
+                <span class="material-symbols-outlined text-secondary icon-fill"
+                    style="font-size: 32px;">dentistry</span>
+                <span
+                    class="text-headline-md font-headline-md font-bold text-primary group-hover:opacity-80 transition-opacity duration-150">
+                    Clínica Dental Tornel
+                </span>
+            </a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-label-md font-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-highest px-3 py-2 rounded-DEFAULT transition-all"
+                    href="../index.html">Inicio</a>
+                <a class="text-label-md font-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-highest px-3 py-2 rounded-DEFAULT transition-all"
+                    href="../servicios/Index.html">Servicios</a>
+                <!-- Active State -->
+                <a class="text-label-md font-label-md text-secondary font-bold border-b-2 border-secondary px-3 py-2 transition-all opacity-80"
+                    href="../nosotros/Index.html">La Clínica</a>
+            </nav>
+            <!-- Trailing Action -->
+            <div class="hidden md:flex">
+                <a class="bg-secondary text-white text-label-md font-label-md px-6 py-3 rounded-full hover:shadow-[0_8px_20px_rgba(0,96,172,0.2)] hover:opacity-90 transition-all duration-150 flex items-center gap-2"
+                    href="../cita/Index.html">
+                    <span class="material-symbols-outlined" style="font-size: 18px;">calendar_month</span>
+                    Pedir Cita
+                </a>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-primary p-2 mobile-menu-btn">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section
+            class="w-full pt-16 pb-section-padding px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto relative overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+                <div class="lg:col-span-5 z-10">
+                    <div
+                        class="inline-flex items-center gap-2 bg-secondary/10 text-secondary text-label-md font-label-md px-4 py-2 rounded-full mb-6">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+                        Los Dolores, Murcia
+                    </div>
+                    <h1 class="text-headline-xl font-headline-xl text-primary mb-6">Diseñando sonrisas con precisión y
+                        calidez.</h1>
+                    <p class="text-body-lg font-body-lg text-on-surface-variant mb-8 max-w-lg">
+                        En Clínica Dental Tornel combinamos la tecnología odontológica más avanzada con un trato humano
+                        y cercano. Tu salud bucodental en un entorno relajante y profesional.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a class="bg-surface-container-highest text-primary text-label-md font-label-md px-6 py-4 rounded-full hover:bg-surface-container-high transition-colors text-center font-semibold"
+                            href="#instalaciones">
+                            Conocer la clínica
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 relative mt-12 lg:mt-0">
+                    <!-- Premium Glassmorphism decorative element -->
+                    <div class="absolute -top-10 -right-10 w-64 h-64 bg-secondary/20 rounded-full blur-3xl z-0"></div>
+                    <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/10 rounded-full blur-2xl z-0"></div>
+                    <div
+                        class="relative z-10 rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(4,22,39,0.08)] bg-white p-2">
+                        <img alt="Fotografía de la recepción de la clínica"
+                            class="w-full h-[500px] object-cover rounded-lg"
+                            data-alt="A brightly lit, modern dental clinic reception area featuring a clean, minimalist design. The aesthetic is 'Boutique Medical' with pristine white countertops, subtle deep navy wall accents, and warm wooden flooring. Soft, diffused daylight streams in from large windows, creating a calming, welcoming, and highly professional atmosphere. There is a sense of clinical precision softened by modern warmth and luxurious simplicity."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRRZHb_q5eRvBPlZq0E1g_ZmDyTeQ6S4smKeY0Np_7tjnnvh0s20pvpXllKDxumLMpRzz2M6DBedZrZy2tQdYDSB1OV9MHBvsSjYNQSGcJgn2SdZdYjkIfjKfDNaBOk6C5m46Wo2GleJZ3nh9dDrIVpnPwLtCRhyAgK6HkXfwEdxCtK2B8HqmYFJuW9pFZwLAJ3gfjO0R6Ku2mpQz3wi108ZTIo8IN8GKt9AimIjx8VJeuvy521T6HuokKXXPk6pGnY-FL4SwXxGA" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Nuestra Filosofía Section -->
+        <section class="w-full py-section-padding bg-surface-container-low">
+            <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="order-2 md:order-1 relative">
+                        <img alt="Dentista sonriendo con paciente"
+                            class="w-full h-auto rounded-xl shadow-[0_12px_32px_rgba(4,22,39,0.06)]"
+                            data-alt="A professional dentist in a crisp white coat smiling reassuringly at a patient in a modern dental office. The room features high-end dental equipment, pristine white surfaces, and subtle secondary blue clinical accents. The lighting is soft and ambient, avoiding harsh clinical glare to emphasize a 'Boutique Medical' feel. The mood conveys deep local trust, human connection, and premium healthcare in a relaxed environment."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZmBN6uvIrSDfmp3WJpyvdXnb9ruhk8IMyrfQTZGjib7E7oNnOZXD9YPX9oSNOncNqrWgU50BqA9WoP8HtNS_js39REMbTrJXe09_35S-bQnumYSANPJS7bVufIgD8KRfLIMbACYCDeBwOkMnkt8UesCdl0Dgyr3n1tdND5pADl0Ar729Jym2ZZmWo-1Ph1Uy9pTO_TkVnnHzl-3mILtwb3Ke0MAojGAiDo1HlikhwOwqps-R1nKsDi-0RLUvFPulbYY1nAzfSBOI" />
+                        <!-- Floating Highlight Card -->
+                        <div
+                            class="absolute -bottom-8 -right-8 bg-white p-6 rounded-xl shadow-[0_16px_40px_rgba(4,22,39,0.08)] max-w-xs hidden sm:block border border-outline-variant/20">
+                            <div
+                                class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-4">
+                                <span class="material-symbols-outlined">health_and_safety</span>
+                            </div>
+                            <h4 class="text-headline-md font-headline-md text-primary mb-2 text-lg">Confianza Local</h4>
+                            <p class="text-body-md font-body-md text-on-surface-variant text-sm">Años cuidando de las
+                                familias de Los Dolores con dedicación absoluta.</p>
+                        </div>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <h2 class="text-primary text-label-md font-label-md uppercase tracking-wider mb-3">Nuestra
+                            Filosofía</h2>
+                        <h3 class="text-headline-lg font-headline-lg text-primary mb-6">Odontología de vanguardia con un
+                            toque humano.</h3>
+                        <p class="text-body-md font-body-md text-on-surface-variant mb-6 leading-relaxed">
+                            Creemos firmemente que la visita al dentista no debe ser una experiencia estresante. Nuestra
+                            filosofía se basa en el <strong>"Boutique Medical"</strong>: un trato exclusivo,
+                            personalizado y en un entorno diseñado específicamente para tu tranquilidad.
+                        </p>
+                        <p class="text-body-md font-body-md text-on-surface-variant mb-8 leading-relaxed">
+                            Ubicados en el corazón de Los Dolores, nos enorgullece ser la clínica de confianza del
+                            barrio, integrando la última tecnología en diagnóstico 3D y tratamientos indoloros para
+                            garantizar resultados precisos y duraderos.
+                        </p>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary mt-0.5">check_circle</span>
+                                <span class="text-body-md font-body-md text-on-surface">Tratamientos mínimamente
+                                    invasivos.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary mt-0.5">check_circle</span>
+                                <span class="text-body-md font-body-md text-on-surface">Atención personalizada y sin
+                                    prisas.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary mt-0.5">check_circle</span>
+                                <span class="text-body-md font-body-md text-on-surface">Materiales dentales de máxima
+                                    calidad.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Instalaciones Modernas Section (Asymmetric Bento Grid) -->
+        <section class="w-full py-section-padding px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto"
+            id="instalaciones">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-primary text-label-md font-label-md uppercase tracking-wider mb-3">El Espacio</h2>
+                <h3 class="text-headline-lg font-headline-lg text-primary mb-4">Instalaciones Modernas</h3>
+                <p class="text-body-md font-body-md text-on-surface-variant">
+                    Descubre un espacio donde el diseño clínico se encuentra con el confort. Cada detalle de nuestra
+                    clínica ha sido pensado para tu bienestar.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[240px]">
+                <!-- Large Image (Span 8) -->
+                <div class="md:col-span-8 row-span-2 rounded-2xl overflow-hidden relative group">
+                    <img alt="Gabinete dental principal"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A spacious, high-tech dental treatment room featuring a premium modern dental chair illuminated by a specialized overhead clinical light. The room walls are painted in calming white with subtle deep navy blue accents. State-of-the-art diagnostic screens display 3D dental models. The atmosphere is extremely clean, sterile yet inviting, perfectly reflecting a modern Boutique Medical aesthetic with ample natural light flowing in."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmH87S6wZZ3-TCILkIBJidqoODjUmJD5DRU3tWstUgpcVLNkGAyEozzJWHNGj1j9F8iuZ5pY-jAg6HRSGMO5buv-L4xlhLhVYLRMp9_EtS-W1ggT1hMYi6mR1F-C7ftUrqvSdweeGonW6-EQdoM7lz_TXopxM0cvFk-_Yy3zlJkE7dESDfaAcSi1uYdeULQNPMcte6901m3VcKrRbvg5YaDQ_3smTp7FoiXFUKbbo5e5v0P76POfxfBxsM8ceBxDKTtypDO22SRAM" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent"></div>
+                    <div class="absolute bottom-6 left-6 right-6 text-white">
+                        <h4 class="text-headline-md font-headline-md mb-2">Gabinetes Equipados</h4>
+                        <p class="text-body-md font-body-md text-white/90">Tecnología de última generación para
+                            precisión absoluta.</p>
+                    </div>
+                </div>
+                <!-- Top Right Square -->
+                <div class="md:col-span-4 row-span-1 rounded-2xl overflow-hidden relative group">
+                    <img alt="Sala de espera relajante"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="A minimalist, comfortable dental waiting room designed to reduce patient anxiety. Features sleek modern chairs in warm neutral tones against a pristine white background. A subtle hint of deep navy blue is present in the decor. Generous whitespace, clean lines, and soft diffused lighting create an atmosphere of clinical cleanliness combined with modern warmth and high-end corporate elegance."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwo298Cs-NFpfE2OsCtvzMhStEm3oRgC762eWw5NfN5-7yusHJtSNDN8IrSso3pTESibz1EPwr6syqWoB154M_P3LIuaONgtKdi198lCRn4CAyaA8FdaEpMvRZ5C9ubgpUpwk2a0gy_ZG5DLJiIRc--SuqQBi-klHjcg2QpnM8Vlimayi7mQpuRJ9qXYJ56RJ-e8_juq-7rMbtAElH-BkrE2_0vY5_E3zj4btMV7J-VM3dOllDQtCyZwCmXyFr3IeuqpxZGug7DfY" />
+                    <div
+                        class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-colors duration-300">
+                    </div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-label-md font-label-md text-lg">Sala de Espera</h4>
+                    </div>
+                </div>
+                <!-- Bottom Right Square -->
+                <div class="md:col-span-4 row-span-1 rounded-2xl overflow-hidden relative group">
+                    <img alt="Tecnología 3D"
+                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        data-alt="Close-up of advanced 3D dental scanning equipment in a pristine, bright medical setting. The machinery is sleek, white, and highly modern, glowing with subtle LED lights. The background is slightly blurred but maintains a clean, sterile white and deep navy color palette. The image conveys technological superiority, clinical precision, and a painless, advanced approach to modern dentistry."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZSSuyGigZP_BAdYMq9njl0e3feZmJ0yzH_6o5WpcysvYy0Xl1Vry-Wu7uo7K-8Jkmb0ufL931YsjwNvsggBQt7t5sqocLwdbhmSdInofDxVCLLt2SFcAfMb38AB5C-PBdcizW7vUDzekw55l9MfrtU-8fzP6-pa66Idlal-6ykHnaW8hvdIQT3itdYpCk643QJjoly34Y1jaoMGw8MyOcWwsFpI9K3mOnWefsY8PhJEhWpEw08K_6GFtAEZsDrC-GPD9PGiJ9TCA" />
+                    <div
+                        class="absolute inset-0 bg-primary/40 group-hover:bg-primary/20 transition-colors duration-300">
+                    </div>
+                    <div class="absolute bottom-4 left-4 text-white">
+                        <h4 class="text-label-md font-label-md text-lg">Radiología 3D</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Conoce al Equipo Section -->
+        <section class="w-full py-section-padding bg-surface">
+            <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+                    <div class="max-w-xl">
+                        <h2 class="text-primary text-label-md font-label-md uppercase tracking-wider mb-3">Nuestro
+                            Equipo</h2>
+                        <h3 class="text-headline-lg font-headline-lg text-primary">Profesionales dedicados a tu salud.
+                        </h3>
+                    </div>
+                    <a class="inline-flex items-center gap-2 text-secondary font-label-md hover:text-primary transition-colors"
+                        href="../nosotros/Index.html">
+                        Ver todos los especialistas
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div
+                        class="bg-white rounded-xl p-6 shadow-[0_8px_24px_rgba(4,22,39,0.04)] hover:shadow-[0_16px_32px_rgba(4,22,39,0.08)] transition-all duration-300 group">
+                        <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-surface">
+                            <img alt="Dr. Carlos Tornel"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A professional headshot of a male dentist, approximately 45 years old, wearing a crisp white clinical uniform. He has a warm, confident, and trustworthy smile. The background is a soft, out-of-focus light blue and white clinic interior. The lighting is bright and flattering, emphasizing a pristine, modern 'Boutique Medical' aesthetic and deep local trust."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxqCFhcQWC2ECA_SVSdYeQoKoeatMisVCQsPiIxH96T1YjDxlEtqf8guPBIUrf6ZO1cOYdP8zUIz3hJaWUruPN3SeQ7y7tSxoMDy89i7nWgmdQpOoFAaQ4vcNQOdmFp5Q8LXoqKQf-4faJINCqK6e6XHVKjaYj538OCfk2LJtbdtUgkw8IBwQJk_417W_48dbU1FEqKhXgl3GWDdEoaq6mI8ihtgd0OIG_d5mMesXItg-5V1_uauY0CMYjt24-wxw7YdetIQJL75Q" />
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="inline-block bg-tertiary-fixed text-primary px-3 py-1 rounded-full text-xs font-label-md mb-3">
+                                Director Médico</div>
+                            <h4 class="text-headline-md font-headline-md text-primary mb-2">Dr. Carlos Tornel</h4>
+                            <p class="text-body-md font-body-md text-on-surface-variant text-sm mb-4">Especialista en
+                                Implantología y Cirugía Oral. Más de 15 años devolviendo sonrisas en Murcia.</p>
+                        </div>
+                    </div>
+                    <!-- Team Member 2 -->
+                    <div
+                        class="bg-white rounded-xl p-6 shadow-[0_8px_24px_rgba(4,22,39,0.04)] hover:shadow-[0_16px_32px_rgba(4,22,39,0.08)] transition-all duration-300 group">
+                        <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-surface">
+                            <img alt="Dra. Elena Martínez"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A professional headshot of a female dentist, approximately 35 years old, wearing a pristine medical scrub in a subtle secondary blue tone. She is smiling warmly at the camera, conveying empathy and clinical precision. The background is a clean, bright, minimalist clinic setting with soft ambient lighting. The aesthetic represents modern warmth, high cleanliness, and premium dental care."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgD8rpr4YD2b1k3bc6w9XAxZVl2PTUaCPruTprTuHCfNqo-fbdKFfO2n0s23Hmd-DV0uHZOYJkxMR8Ov2tJkJBp-6GSC-6SOz74O2bHWzz5ApeDDF8UZ9x_aYMuCC0sTB3UN2ARVNi36GQL1Y3X2eyK0PHVmUcleV71fvAi0Fe6xQKxf9J5aIjNGOkcAn3IpIFgr25mp50QnzfHUQ0SeXPUg1P1y39eg1QteEOArePRISVKAGOXb4nEyBIu8SD4hyelCtMPgFL04c" />
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="inline-block bg-tertiary-fixed text-primary px-3 py-1 rounded-full text-xs font-label-md mb-3">
+                                Ortodoncia</div>
+                            <h4 class="text-headline-md font-headline-md text-primary mb-2">Dra. Elena Martínez</h4>
+                            <p class="text-body-md font-body-md text-on-surface-variant text-sm mb-4">Experta en
+                                Ortodoncia Invisible y diseño de sonrisas digitales. Apasionada por la estética dental.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Team Member 3 -->
+                    <div
+                        class="bg-white rounded-xl p-6 shadow-[0_8px_24px_rgba(4,22,39,0.04)] hover:shadow-[0_16px_32px_rgba(4,22,39,0.08)] transition-all duration-300 group">
+                        <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-surface">
+                            <img alt="Dra. Laura Gómez"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A professional headshot of a female dental hygienist in her late 20s, dressed in a spotless white clinical uniform. She radiates a gentle, welcoming demeanor with a bright smile. The lighting is high-key and soft, set against a modern dental clinic background with deep navy and light blue blurred elements. The portrait emphasizes clinical hygiene, approachability, and patient comfort."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArOM4lgJvJojzOfjF7-iHhEsg4UWGS_7EQ_5QhNll5ai8SICEOSFnqNaqAGQkxMHZRtwS707lJSCFT8w7uaOB7t17Uj8XRJ0crjBS1et3oWIqNRV2tmiMRvxCjAwyJU8wfDnVUkaN5yVv0iq79-sGbg1sSgp9PnPyir0fe8nePPY6ZJ2WocFya7dSgfyH0f63K4SCkPMyST8WcW1A12Er86AScch6U7TCh-1y__FUqc0mKomYJBl_aCncaTIKaCDHgtdrjqEZyrc0" />
+                        </div>
+                        <div class="text-center">
+                            <div
+                                class="inline-block bg-tertiary-fixed text-primary px-3 py-1 rounded-full text-xs font-label-md mb-3">
+                                Odontopediatría</div>
+                            <h4 class="text-headline-md font-headline-md text-primary mb-2">Dra. Laura Gómez</h4>
+                            <p class="text-body-md font-body-md text-on-surface-variant text-sm mb-4">Especializada en
+                                el cuidado dental infantil. Hace que la visita al dentista sea un juego divertido.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA Appointment Bar -->
+        <section class="w-full bg-primary py-12 relative overflow-hidden">
+            <!-- Decorative Background Pattern -->
+            <div class="absolute inset-0 opacity-5"
+                style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;">
+            </div>
+            <div class="max-w-4xl mx-auto px-margin-mobile text-center relative z-10">
+                <h3 class="text-headline-lg font-headline-lg text-white mb-4">¿Listo para mejorar tu sonrisa?</h3>
+                <p class="text-body-md font-body-md text-white/80 mb-8 max-w-lg mx-auto">
+                    Ven a conocernos a nuestras instalaciones en Los Dolores. La primera consulta y diagnóstico 3D son
+                    sin compromiso.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                    <a class="bg-secondary text-white text-label-md font-label-md px-8 py-4 rounded-full shadow-[0_8px_20px_rgba(0,96,172,0.4)] hover:scale-105 transition-transform duration-200 flex items-center gap-2 w-full sm:w-auto justify-center"
+                        href="../cita/Index.html">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                        Pedir Cita Ahora
+                    </a>
+                    <a class="text-white border border-white/30 text-label-md font-label-md px-8 py-4 rounded-full hover:bg-white/10 transition-colors flex items-center gap-2 w-full sm:w-auto justify-center"
+                        href="tel:968348564">
+                        <span class="material-symbols-outlined">call</span>
+                        968 348 564
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Shared Component: Footer -->
+    <footer
+        class="bg-primary dark:bg-tertiary w-full rounded-none px-margin-desktop py-12 flex flex-col md:flex-row justify-between items-center gap-gutter">
+        <div class="flex flex-col items-center md:items-start gap-4">
+            <span class="text-headline-sm font-headline-sm font-bold text-white flex items-center gap-2">
+                <span class="material-symbols-outlined icon-fill">dentistry</span>
+                Clínica Dental Tornel
+            </span>
+            <p
+                class="text-body-md font-body-md text-on-primary dark:text-on-tertiary opacity-80 text-center md:text-left text-sm">
+                © 2024 Clínica Dental Tornel. Los Dolores, Murcia. Todos los derechos reservados.
+            </p>
+        </div>
+        <nav class="flex flex-wrap justify-center md:justify-end gap-6">
+            <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white hover:underline decoration-secondary-container transition-colors duration-100 hover:scale-95"
+                href="#">Política de Privacidad</a>
+            <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white hover:underline decoration-secondary-container transition-colors duration-100 hover:scale-95"
+                href="#">Aviso Legal</a>
+            <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white hover:underline decoration-secondary-container transition-colors duration-100 hover:scale-95"
+                href="#">Cookies</a>
+            <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white hover:underline decoration-secondary-container transition-colors duration-100 hover:scale-95 flex items-center gap-1"
+                href="#">
+                <span class="material-symbols-outlined" style="font-size: 18px;">photo_camera</span>
+                Instagram
+            </a>
+        </nav>
+    </footer>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-surface z-[100] hidden flex-col">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 border-b border-outline-variant/30">
+            <div class="flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined text-secondary text-[28px]" style="font-variation-settings: 'FILL' 1;">dentistry</span>
+                <span class="font-headline-md font-bold text-lg">Clínica Dental Tornel</span>
+            </div>
+            <button id="close-menu" class="text-primary p-2" aria-label="Cerrar menú">
+                <span class="material-symbols-outlined text-[32px]">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center flex-grow gap-8 p-6">
+            <a href="../index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Inicio</a>
+            <a href="../servicios/Index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Servicios</a>
+            <a href="../nosotros/Index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">La Clínica</a>
+            <a href="../cita/Index.html" class="mt-6 bg-secondary text-white px-10 py-4 rounded-full text-headline-md font-headline-md shadow-md">Pedir Cita</a>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openBtns = document.querySelectorAll('.mobile-menu-btn');
+            const closeBtn = document.getElementById('close-menu');
+            const menuLinks = mobileMenu.querySelectorAll('a');
+
+            openBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            const closeMenu = () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = '';
+            };
+
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+        });
+    </script>
+</body>
+
+</html>

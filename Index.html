@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Clínica Dental Tornel | Diseñando sonrisas en Los Dolores, Murcia</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&amp;family=Montserrat:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#0060ac",
+                        "surface": "#f8f9fa",
+                        "surface-tint": "#4f6073",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#38485a",
+                        "outline-variant": "#c4c6cd",
+                        "secondary-fixed-dim": "#a4c9ff",
+                        "primary-fixed": "#d2e4fb",
+                        "primary-fixed-dim": "#b7c8de",
+                        "on-tertiary-fixed": "#141d22",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "outline": "#74777d",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-tertiary-fixed-variant": "#3f484e",
+                        "on-primary-fixed": "#0b1d2d",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#003e73",
+                        "primary-container": "#1a2b3c",
+                        "tertiary-container": "#222b30",
+                        "inverse-primary": "#b7c8de",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#68abff",
+                        "on-surface-variant": "#44474c",
+                        "on-tertiary-container": "#899299",
+                        "surface-variant": "#e1e3e4",
+                        "surface-container-high": "#e7e8e9",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#8192a7",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary-fixed": "#001c39",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-error": "#ffffff",
+                        "tertiary": "#0e161b",
+                        "secondary-fixed": "#d4e3ff",
+                        "tertiary-fixed-dim": "#bfc8ce",
+                        "inverse-surface": "#2e3132",
+                        "tertiary-fixed": "#dbe4eb",
+                        "primary": "#041627",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary-fixed-variant": "#004883",
+                        "on-background": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-padding": "80px",
+                        "unit": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-lg": ["Manrope"],
+                        "headline-xl": ["Montserrat"],
+                        "label-md": ["Manrope"],
+                        "body-md": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            @apply bg-background text-on-background font-body-md;
+        }
+
+        .glass-card {
+            @apply bg-surface/80 backdrop-blur-md border border-white/20 shadow-[0_8px_20px_rgba(4, 22, 39, 0.04)] rounded-xl;
+        }
+
+        .hover-lift {
+            @apply transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_24px_rgba(4, 22, 39, 0.08)];
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+    <!-- TopAppBar -->
+    <header
+        class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm w-full">
+        <div
+            class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-3">
+                <img alt="Logotipo Clínica Dental Tornel" class="h-10 w-auto object-contain"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKAHTVKSBzEmnpCy_fr6caKql0YRvoeOuYKnfhuFZ0IBNn_Y4hsFANwSYOYSdfeYzTDhuIaFNZqEsc2J1A4rWenqVnGpp6OThmH2EF6tYrICqpJ4U2vf_DX7g8KOPOCoQ_oL_TMgPUvWVucgXyXt7g_4szBTpRjWnEHRRHCZUX50XP4EFYpScjdmOHKJgkHdpn8I-HEAa-m-0ibOEHcGa1tuzK6dZVGQDosZ8wzPUcw9J_w6g7nwAioMbREDTvdKCEF_tG1Vj9HOE" />
+                <span class="text-headline-md font-headline-md font-bold text-primary hidden sm:block">Clínica Dental
+                    Tornel</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-secondary font-bold border-b-2 border-secondary pb-1 text-label-md font-label-md"
+                    href="./index.html">Inicio</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors text-label-md font-label-md"
+                    href="./servicios/Index.html">Servicios</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors text-label-md font-label-md"
+                    href="./nosotros/Index.html">La Clínica</a>
+            </nav>
+            <div class="flex items-center gap-2">
+                <a class="hidden md:flex bg-secondary text-white px-6 py-2.5 rounded-full text-label-md font-label-md hover:opacity-90 transition-opacity items-center gap-2 shadow-md"
+                    href="./cita/Index.html">
+                    <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    <span>Pedir Cita</span>
+                </a>
+                <button class="md:hidden text-primary p-2 mobile-menu-btn" aria-label="Abrir menú">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 z-0">
+                <img alt="Modern and bright dental clinic room with a comfortable patient chair, advanced dental equipment, and natural light streaming in, creating a calming and professional atmosphere."
+                    class="w-full h-full object-cover object-center"
+                    data-alt="A bright, modern dental clinic room featuring a state-of-the-art patient chair and advanced equipment. The space is flooded with natural light, emphasizing a clean, sterile, yet welcoming environment. The color palette includes crisp whites, soft grays, and touches of clinical blue, establishing a professional and calming atmosphere suitable for high-end healthcare."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFLN91ytezEFaScVaij433dGuK64X9hVFBVBb-eEp7oH5Ojp0XQb3K90LnBFhJRbLmg7OvdcdAPCOLOqKUA3ReFP-3oPHf5Jc9qbvBAB1sptjETOPihESNVto52gHWkdKNwEw-MzZmw7Q1pdTzvwb-gkN8_yrppagQYC5cAu_iMPDY9QuD4g87aiLKhB1VRIMKwmQZKqjs-dVr-9fUlEqZmybGLBWz17NMY_L-VmCn-DX2NPp4rZeVU-SPSXRitKdUvGaGkLUjwR4" />
+                <div class="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-transparent"></div>
+            </div>
+            <div
+                class="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col items-start justify-center">
+                <div class="max-w-2xl text-white">
+                    <span
+                        class="inline-block px-4 py-1.5 rounded-full bg-secondary-container/20 text-secondary-fixed backdrop-blur-sm border border-secondary-fixed/30 text-label-md font-label-md mb-6">
+                        Odontología Avanzada
+                    </span>
+                    <h1 class="text-headline-xl font-headline-xl text-white mb-6 leading-tight">
+                        Diseñando sonrisas <span class="inline-block animate-bounce">🦷</span>
+                    </h1>
+                    <p class="text-body-lg font-body-lg text-surface-variant mb-10 max-w-xl">
+                        Tu salud dental es nuestra prioridad en Los Dolores, Murcia. Combinamos tecnología de vanguardia
+                        con un trato humano y cercano para ofrecerte la mejor experiencia.
+                    </p>
+                    <div class="flex flex-wrap items-center gap-4">
+                        <a class="bg-secondary text-white px-8 py-4 rounded-full text-label-md font-label-md hover:bg-secondary/90 transition-all shadow-lg hover:shadow-xl flex items-center gap-2 hover:-translate-y-0.5"
+                            href="./cita/Index.html">
+                            <span class="material-symbols-outlined">arrow_forward</span>
+                            Pedir Cita
+                        </a>
+                        <a class="px-8 py-4 rounded-full text-white text-label-md font-label-md border border-white/30 hover:bg-white/10 transition-all flex items-center gap-2 backdrop-blur-sm"
+                            href="tel:968348564">
+                            <span class="material-symbols-outlined">call</span>
+                            968 348 564
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Features / Trust Indicators -->
+        <section class="py-12 bg-surface border-b border-outline-variant/20">
+            <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex items-center gap-4 p-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">biotech</span>
+                        </div>
+                        <div>
+                            <h3 class="text-label-md font-label-md text-on-surface mb-1">Tecnología Avanzada</h3>
+                            <p class="text-body-md font-body-md text-on-surface-variant text-sm">Equipamiento de última
+                                generación para diagnósticos precisos.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        </div>
+                        <div>
+                            <h3 class="text-label-md font-label-md text-on-surface mb-1">Trato Personalizado</h3>
+                            <p class="text-body-md font-body-md text-on-surface-variant text-sm">Cuidamos de ti con
+                                empatía y cercanía en cada visita.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4">
+                        <div
+                            class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary flex-shrink-0">
+                            <span class="material-symbols-outlined"
+                                style="font-variation-settings: 'FILL' 1;">payments</span>
+                        </div>
+                        <div>
+                            <h3 class="text-label-md font-label-md text-on-surface mb-1">Facilidades de Pago</h3>
+                            <p class="text-body-md font-body-md text-on-surface-variant text-sm">Opciones de
+                                financiación adaptadas a tus necesidades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section -->
+        <section class="py-section-padding bg-background" id="servicios">
+            <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="text-center mb-16">
+                    <h2 class="text-headline-lg font-headline-lg text-primary mb-4">Nuestros Servicios</h2>
+                    <p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">Soluciones integrales
+                        para la salud y estética de tu sonrisa, aplicadas por especialistas altamente cualificados.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Service 1 -->
+                    <div class="glass-card p-8 hover-lift group cursor-pointer bg-white">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-surface flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-[32px]">dentistry</span>
+                        </div>
+                        <h3 class="text-headline-md font-headline-md text-primary mb-3">Odontología General</h3>
+                        <p class="text-body-md font-body-md text-on-surface-variant mb-6">Prevención, diagnóstico y
+                            tratamiento de problemas dentales comunes para mantener una salud bucodental óptima.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Empastes</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Limpiezas</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Endodoncia</span>
+                        </div>
+                        <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:translate-x-2 transition-transform"
+                            href="./servicios/Index.html">
+                            Saber más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="glass-card p-8 hover-lift group cursor-pointer bg-white relative overflow-hidden">
+                        <div
+                            class="absolute top-0 right-0 w-32 h-32 bg-primary-fixed/50 rounded-bl-full -z-10 transition-transform group-hover:scale-110">
+                        </div>
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-surface flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-[32px]">align_horizontal_center</span>
+                        </div>
+                        <h3 class="text-headline-md font-headline-md text-primary mb-3">Ortodoncia</h3>
+                        <p class="text-body-md font-body-md text-on-surface-variant mb-6">Corrección de la alineación
+                            dental y la mordida mediante técnicas modernas y discretas para niños y adultos.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Invisible</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Brackets</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Infantil</span>
+                        </div>
+                        <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:translate-x-2 transition-transform"
+                            href="./servicios/Index.html">
+                            Saber más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="glass-card p-8 hover-lift group cursor-pointer bg-white">
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-surface flex items-center justify-center text-secondary mb-6 group-hover:bg-secondary group-hover:text-white transition-colors">
+                            <span class="material-symbols-outlined text-[32px]">planet</span>
+                        </div>
+                        <h3 class="text-headline-md font-headline-md text-primary mb-3">Implantes Dentales</h3>
+                        <p class="text-body-md font-body-md text-on-surface-variant mb-6">Recupera la funcionalidad y
+                            estética de tu sonrisa con implantes de titanio de alta calidad y cirugía mínimamente
+                            invasiva.</p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Carga
+                                Inmediata</span>
+                            <span
+                                class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Cirugía
+                                Guiada</span>
+                        </div>
+                        <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:translate-x-2 transition-transform"
+                            href="./servicios/Index.html">
+                            Saber más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Location & Contact Section -->
+        <section class="py-section-padding bg-surface" id="contacto">
+            <div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-headline-lg font-headline-lg text-primary mb-6">Visítanos en Los Dolores</h2>
+                        <p class="text-body-lg font-body-lg text-on-surface-variant mb-8">Estamos estratégicamente
+                            ubicados para ofrecerte el mejor servicio dental cerca de ti. Pide tu cita hoy mismo.</p>
+                        <div class="space-y-6 mb-8">
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary mt-1">
+                                    <span class="material-symbols-outlined">location_on</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-label-md font-label-md text-on-surface">Dirección</h4>
+                                    <p class="text-body-md font-body-md text-on-surface-variant">C. Mayor, 102,
+                                        30011<br />Los Dolores, Murcia</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary mt-1">
+                                    <span class="material-symbols-outlined">call</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-label-md font-label-md text-on-surface">Teléfono</h4>
+                                    <p class="text-body-md font-body-md text-on-surface-variant"><a
+                                            class="hover:text-secondary transition-colors" href="tel:968348564">968 348 564</a> | <a class="hover:text-secondary transition-colors" href="tel:686010557">686 010 557</a></p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center text-primary mt-1">
+                                    <span class="material-symbols-outlined">schedule</span>
+                                </div>
+                                <div>
+                                    <h4 class="text-label-md font-label-md text-on-surface">Horario</h4>
+                                    <p class="text-body-md font-body-md text-on-surface-variant">Lunes a Viernes: 9:30 -
+                                        13:30, 16:30 - 20:30</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="./cita/Index.html"
+                            class="inline-block bg-secondary text-white px-8 py-3 rounded-full text-label-md font-label-md hover:bg-secondary/90 transition-all shadow-md w-full sm:w-auto text-center">
+                            Solicitar Cita Online
+                        </a>
+                    </div>
+                    <div
+                        class="rounded-2xl overflow-hidden h-[400px] shadow-lg border border-outline-variant/20 relative bg-surface-container">
+                        <!-- Placeholder for Map - replacing with an abstract representation for design purposes -->
+                        <div class="absolute inset-0 bg-primary-fixed-dim/20 flex items-center justify-center flex-col">
+                            <span class="material-symbols-outlined text-[48px] text-primary/40 mb-2">map</span>
+                            <span class="text-label-md font-label-md text-primary/60"
+                                data-location="Los Dolores, Murcia">Mapa de Los Dolores, Murcia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary text-on-primary w-full rounded-none px-margin-mobile md:px-margin-desktop py-12">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-gutter">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <span class="text-headline-md font-headline-md font-bold text-white">Clínica Dental Tornel</span>
+                <p
+                    class="text-body-md font-body-md text-primary-fixed-dim/80 text-sm max-w-sm text-center md:text-left">
+                    Odontología avanzada y trato personalizado en el corazón de Los Dolores.
+                </p>
+            </div>
+            <div class="flex flex-col items-center gap-6">
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white transition-colors hover:underline decoration-secondary-container"
+                        href="#">Política de Privacidad</a>
+                    <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white transition-colors hover:underline decoration-secondary-container"
+                        href="#">Aviso Legal</a>
+                    <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white transition-colors hover:underline decoration-secondary-container"
+                        href="#">Cookies</a>
+                    <a class="text-label-md font-label-md text-primary-fixed-dim/80 hover:text-white transition-colors flex items-center gap-1 hover:underline decoration-secondary-container"
+                        href="https://www.instagram.com/clinicadentaltornel/" rel="noopener noreferrer" target="_blank">
+                        Instagram
+                        <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+                    </a>
+                </div>
+                <p class="text-body-md font-body-md text-primary-fixed-dim/60 text-xs">
+                    © 2024 Clínica Dental Tornel. Los Dolores, Murcia. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- Persistent Appointment Bar (Mobile) -->
+    <div
+        class="md:hidden fixed bottom-0 left-0 right-0 bg-surface border-t border-outline-variant/30 p-4 shadow-[0_-4px_12px_rgba(0,0,0,0.05)] z-40 flex gap-4">
+        <a class="flex-1 flex items-center justify-center gap-2 py-3 rounded-full border border-secondary text-secondary font-label-md text-label-md"
+            href="tel:968348564">
+            <span class="material-symbols-outlined text-[18px]">call</span>
+            Llamar
+        </a>
+        <a class="flex-1 flex items-center justify-center gap-2 py-3 rounded-full bg-secondary text-white font-label-md text-label-md shadow-md"
+            href="./cita/Index.html">
+            <span class="material-symbols-outlined text-[18px]">event</span>
+            Cita
+        </a>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-surface z-[100] hidden flex-col">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 border-b border-outline-variant/30">
+            <div class="flex items-center gap-2 text-primary">
+                <span class="material-symbols-outlined text-secondary text-[28px]" style="font-variation-settings: 'FILL' 1;">dentistry</span>
+                <span class="font-headline-md font-bold text-lg">Clínica Dental Tornel</span>
+            </div>
+            <button id="close-menu" class="text-primary p-2" aria-label="Cerrar menú">
+                <span class="material-symbols-outlined text-[32px]">close</span>
+            </button>
+        </div>
+        <nav class="flex flex-col items-center justify-center flex-grow gap-8 p-6">
+            <a href="./index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Inicio</a>
+            <a href="./servicios/Index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Servicios</a>
+            <a href="./nosotros/Index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">La Clínica</a>
+            <a href="./cita/Index.html" class="mt-6 bg-secondary text-white px-10 py-4 rounded-full text-headline-md font-headline-md shadow-md">Pedir Cita</a>
+        </nav>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const openBtns = document.querySelectorAll('.mobile-menu-btn');
+            const closeBtn = document.getElementById('close-menu');
+            const menuLinks = mobileMenu.querySelectorAll('a');
+
+            openBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenu.classList.add('flex');
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+
+            const closeMenu = () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+                document.body.style.overflow = '';
+            };
+
+            if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+            menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+        });
+    </script>
+</body>
+
+</html>

@@ -142,40 +142,33 @@
 <body class="bg-background text-on-surface font-body-md antialiased selection:bg-secondary selection:text-white">
     <!-- Shared Component: TopAppBar -->
     <header
-        class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 w-full border-b border-outline-variant/30 shadow-sm">
+        class="bg-[#142132] sticky top-0 z-50 shadow-sm w-full">
         <div
             class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
-            <!-- Brand -->
-            <a class="flex items-center gap-2 group" href="#">
-                <span class="material-symbols-outlined text-secondary icon-fill"
-                    style="font-size: 32px;">dentistry</span>
-                <span
-                    class="text-headline-md font-headline-md font-bold text-primary group-hover:opacity-80 transition-opacity duration-150">
-                    Clínica Dental Tornel
-                </span>
-            </a>
-            <!-- Desktop Navigation -->
+            <div class="flex items-center gap-3">
+                <img alt="Logotipo Clínica Dental Tornel" class="h-10 w-auto object-contain grayscale invert mix-blend-screen brightness-200"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKAHTVKSBzEmnpCy_fr6caKql0YRvoeOuYKnfhuFZ0IBNn_Y4hsFANwSYOYSdfeYzTDhuIaFNZqEsc2J1A4rWenqVnGpp6OThmH2EF6tYrICqpJ4U2vf_DX7g8KOPOCoQ_oL_TMgPUvWVucgXyXt7g_4szBTpRjWnEHRRHCZUX50XP4EFYpScjdmOHKJgkHdpn8I-HEAa-m-0ibOEHcGa1tuzK6dZVGQDosZ8wzPUcw9J_w6g7nwAioMbREDTvdKCEF_tG1Vj9HOE" />
+                <span class="text-headline-md font-headline-md font-bold text-white hidden sm:block">Clínica Dental
+                    Tornel</span>
+            </div>
             <nav class="hidden md:flex items-center gap-8">
-                <a class="text-label-md font-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-highest px-3 py-2 rounded-DEFAULT transition-all"
+                <a class="text-white/80 hover:text-white transition-colors text-label-md font-label-md"
                     href="../index.html">Inicio</a>
-                <a class="text-label-md font-label-md text-on-surface-variant hover:text-secondary hover:bg-surface-container-highest px-3 py-2 rounded-DEFAULT transition-all"
+                <a class="text-white/80 hover:text-white transition-colors text-label-md font-label-md"
                     href="../servicios/Index.html">Servicios</a>
-                <!-- Active State -->
-                <a class="text-label-md font-label-md text-secondary font-bold border-b-2 border-secondary px-3 py-2 transition-all opacity-80"
+                <a class="text-white font-bold border-b-2 border-white pb-1 text-label-md font-label-md"
                     href="../nosotros/Index.html">La Clínica</a>
             </nav>
-            <!-- Trailing Action -->
-            <div class="hidden md:flex">
-                <a class="bg-secondary text-white text-label-md font-label-md px-6 py-3 rounded-full hover:shadow-[0_8px_20px_rgba(0,96,172,0.2)] hover:opacity-90 transition-all duration-150 flex items-center gap-2"
+            <div class="flex items-center gap-2">
+                <a class="hidden md:flex bg-white text-[#142132] px-6 py-2.5 rounded-full text-label-md font-label-md hover:bg-surface-container-low transition-colors items-center gap-2 shadow-md"
                     href="../cita/Index.html">
-                    <span class="material-symbols-outlined" style="font-size: 18px;">calendar_month</span>
-                    Pedir Cita
+                    <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    <span>Pedir Cita</span>
                 </a>
+                <button class="md:hidden text-white p-2 mobile-menu-btn" aria-label="Abrir menú">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
             </div>
-            <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-primary p-2 mobile-menu-btn">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
         </div>
     </header>
     <main>
@@ -344,7 +337,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Team Member 1 -->
-                    <div
+                    <div id="implantes"
                         class="bg-white rounded-xl p-6 shadow-[0_8px_24px_rgba(4,22,39,0.04)] hover:shadow-[0_16px_32px_rgba(4,22,39,0.08)] transition-all duration-300 group">
                         <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-surface">
                             <img alt="Dr. Carlos Tornel"
@@ -362,7 +355,7 @@
                         </div>
                     </div>
                     <!-- Team Member 2 -->
-                    <div
+                    <div id="ortodoncia"
                         class="bg-white rounded-xl p-6 shadow-[0_8px_24px_rgba(4,22,39,0.04)] hover:shadow-[0_16px_32px_rgba(4,22,39,0.08)] transition-all duration-300 group">
                         <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-surface">
                             <img alt="Dra. Elena Martínez"
@@ -381,7 +374,7 @@
                         </div>
                     </div>
                     <!-- Team Member 3 -->
-                    <div
+                    <div id="odontologia"
                         class="bg-white rounded-xl p-6 shadow-[0_8px_24px_rgba(4,22,39,0.04)] hover:shadow-[0_16px_32px_rgba(4,22,39,0.08)] transition-all duration-300 group">
                         <div class="w-32 h-32 mx-auto rounded-full overflow-hidden mb-6 border-4 border-surface">
                             <img alt="Dra. Laura Gómez"

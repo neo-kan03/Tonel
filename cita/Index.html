@@ -120,35 +120,33 @@
     class="bg-surface text-on-surface font-body-md antialiased selection:bg-secondary-fixed selection:text-on-secondary-container flex flex-col min-h-screen">
     <!-- TopAppBar -->
     <header
-        class="bg-surface/90 dark:bg-primary/95 backdrop-blur-md sticky top-0 z-50 w-full border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none">
+        class="bg-[#142132] sticky top-0 z-50 shadow-sm w-full">
         <div
             class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
-            <!-- Brand Logo -->
-            <a aria-label="Logotipo Clínica Dental Tornel"
-                class="text-headline-md font-headline-md font-bold text-primary dark:text-secondary-fixed flex items-center gap-2"
-                href="#">
-                <span class="material-symbols-outlined text-secondary"
-                    style="font-variation-settings: 'FILL' 1;">dentistry</span>
-                Clínica Dental Tornel
-            </a>
-            <!-- Desktop Navigation -->
+            <div class="flex items-center gap-3">
+                <img alt="Logotipo Clínica Dental Tornel" class="h-10 w-auto object-contain grayscale invert mix-blend-screen brightness-200"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKAHTVKSBzEmnpCy_fr6caKql0YRvoeOuYKnfhuFZ0IBNn_Y4hsFANwSYOYSdfeYzTDhuIaFNZqEsc2J1A4rWenqVnGpp6OThmH2EF6tYrICqpJ4U2vf_DX7g8KOPOCoQ_oL_TMgPUvWVucgXyXt7g_4szBTpRjWnEHRRHCZUX50XP4EFYpScjdmOHKJgkHdpn8I-HEAa-m-0ibOEHcGa1tuzK6dZVGQDosZ8wzPUcw9J_w6g7nwAioMbREDTvdKCEF_tG1Vj9HOE" />
+                <span class="text-headline-md font-headline-md font-bold text-white hidden sm:block">Clínica Dental
+                    Tornel</span>
+            </div>
             <nav class="hidden md:flex items-center gap-8">
-                <a class="text-label-md font-label-md text-on-surface-variant dark:text-on-primary-container hover:text-secondary hover:bg-surface-container-highest dark:hover:bg-primary-container transition-all px-3 py-2 rounded-md"
+                <a class="text-white/80 hover:text-white transition-colors text-label-md font-label-md"
                     href="../index.html">Inicio</a>
-                <a class="text-label-md font-label-md text-on-surface-variant dark:text-on-primary-container hover:text-secondary hover:bg-surface-container-highest dark:hover:bg-primary-container transition-all px-3 py-2 rounded-md"
+                <a class="text-white/80 hover:text-white transition-colors text-label-md font-label-md"
                     href="../servicios/Index.html">Servicios</a>
-                <a class="text-label-md font-label-md text-on-surface-variant dark:text-on-primary-container hover:text-secondary hover:bg-surface-container-highest dark:hover:bg-primary-container transition-all px-3 py-2 rounded-md"
+                <a class="text-white/80 hover:text-white transition-colors text-label-md font-label-md"
                     href="../nosotros/Index.html">La Clínica</a>
             </nav>
-            <!-- Trailing Action -->
-            <a href="../cita/Index.html"
-                class="hidden md:flex items-center justify-center bg-secondary text-white rounded-full px-6 py-2.5 text-label-md font-label-md hover:bg-secondary/90 transition-colors shadow-sm">
-                Pedir Cita
-            </a>
-            <!-- Mobile Menu Toggle (Visual Only) -->
-            <button class="md:hidden text-primary p-2 mobile-menu-btn">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
+            <div class="flex items-center gap-2">
+                <a class="hidden md:flex bg-white text-[#142132] px-6 py-2.5 rounded-full text-label-md font-label-md hover:bg-surface-container-low transition-colors items-center gap-2 shadow-md"
+                    href="../cita/Index.html">
+                    <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    <span>Pedir Cita</span>
+                </a>
+                <button class="md:hidden text-white p-2 mobile-menu-btn" aria-label="Abrir menú">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </div>
         </div>
     </header>
     <!-- Main Content Canvas -->
@@ -344,13 +342,18 @@
                             <p class="text-body-md font-body-md text-on-surface-variant mt-1">Calle Mayor, 102<br />30011 Murcia</p>
                         </div>
                     </div>
-                    <!-- Map Placeholder -->
+                    <!-- Mapa Interactivo Google Maps -->
                     <div class="w-full h-48 bg-surface-variant rounded-xl overflow-hidden relative mb-6">
-                        <img alt="Mapa de ubicación de la clínica en Los Dolores, Murcia"
-                            class="w-full h-full object-cover opacity-80 mix-blend-multiply"
-                            data-alt="A clean, minimalist vector-style map interface showing a specific location marked with a subtle, modern blue pin. The map style uses light grey and soft white tones, reflecting a clean, clinical, and corporate aesthetic. Streets are softly outlined, avoiding visual clutter, perfect for a high-end medical clinic contact page."
-                            data-location="Murcia"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAv58b97hIN28-rD_nV9BWOMnmWHjWpe8RiDrboLKryh276J0J97m2Mc8KN5QA_NHa20IpoE-pmyu79gGJ-xiYh5T1mcvw1GCTeY9lpEBdW3L1KSZBf2qhGatm7B0JXFiHg1frWYmEL9WxUyjoKlYzXo3qZGsyLKjztiDJpq1hSEospHPWjD2mb500rgPI_dfGRiWdN8bLlj8Cf6MgYw8E0ZJ7MZzkDA1N4-2J93Zs3AL2IfR95VoxayxNqcmRj5YeJdPnUAVCziTY" />
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Calle%20Mayor%2C%20102%2C%20Los%20Dolores%2C%2030011%20Murcia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            aria-hidden="false" 
+                            tabindex="0">
+                        </iframe>
                     </div>
                     <div class="flex flex-col gap-3">
                         <a class="flex items-center gap-3 text-body-md font-body-md text-primary hover:text-secondary transition-colors group"

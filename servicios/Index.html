@@ -182,38 +182,33 @@
 <body class="bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col">
     <!-- TopAppBar -->
     <header
-        class="bg-surface/90 dark:bg-primary/95 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-outline-variant/30 dark:border-outline/20 shadow-sm dark:shadow-none">
+        class="bg-[#142132] sticky top-0 z-50 shadow-sm w-full">
         <div
             class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
-            <!-- Brand -->
             <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-secondary text-3xl"
-                    style="font-variation-settings: 'FILL' 0;">dentistry</span>
-                <span
-                    class="text-headline-md font-headline-md font-bold text-primary dark:text-secondary-fixed tracking-tight">Clínica
-                    Dental Tornel</span>
+                <img alt="Logotipo Clínica Dental Tornel" class="h-10 w-auto object-contain grayscale invert mix-blend-screen brightness-200"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKAHTVKSBzEmnpCy_fr6caKql0YRvoeOuYKnfhuFZ0IBNn_Y4hsFANwSYOYSdfeYzTDhuIaFNZqEsc2J1A4rWenqVnGpp6OThmH2EF6tYrICqpJ4U2vf_DX7g8KOPOCoQ_oL_TMgPUvWVucgXyXt7g_4szBTpRjWnEHRRHCZUX50XP4EFYpScjdmOHKJgkHdpn8I-HEAa-m-0ibOEHcGa1tuzK6dZVGQDosZ8wzPUcw9J_w6g7nwAioMbREDTvdKCEF_tG1Vj9HOE" />
+                <span class="text-headline-md font-headline-md font-bold text-white hidden sm:block">Clínica Dental
+                    Tornel</span>
             </div>
-            <!-- Navigation (Desktop) -->
             <nav class="hidden md:flex items-center gap-8">
-                <!-- Inactive Nav Link -->
-                <a class="text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors text-label-md font-label-md hover:bg-surface-container-highest dark:hover:bg-primary-container px-3 py-2 rounded-md"
+                <a class="text-white/80 hover:text-white transition-colors text-label-md font-label-md"
                     href="../index.html">Inicio</a>
-                <!-- Active Nav Link -->
-                <a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary text-label-md font-label-md px-3 py-2 opacity-80 duration-150"
+                <a class="text-white font-bold border-b-2 border-white pb-1 text-label-md font-label-md"
                     href="../servicios/Index.html">Servicios</a>
-                <!-- Inactive Nav Link -->
-                <a class="text-on-surface-variant dark:text-on-primary-container hover:text-secondary transition-colors text-label-md font-label-md hover:bg-surface-container-highest dark:hover:bg-primary-container px-3 py-2 rounded-md"
+                <a class="text-white/80 hover:text-white transition-colors text-label-md font-label-md"
                     href="../nosotros/Index.html">La Clínica</a>
             </nav>
-            <!-- Trailing Action -->
-            <a href="../cita/Index.html"
-                class="hidden md:flex items-center justify-center bg-secondary text-white px-6 py-2.5 rounded-full text-label-md font-label-md font-bold hover:bg-primary transition-colors shadow-sm">
-                Pedir Cita
-            </a>
-            <!-- Mobile Menu Toggle -->
-            <button class="md:hidden text-primary p-2 mobile-menu-btn">
-                <span class="material-symbols-outlined text-3xl">menu</span>
-            </button>
+            <div class="flex items-center gap-2">
+                <a class="hidden md:flex bg-white text-[#142132] px-6 py-2.5 rounded-full text-label-md font-label-md hover:bg-surface-container-low transition-colors items-center gap-2 shadow-md"
+                    href="../cita/Index.html">
+                    <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    <span>Pedir Cita</span>
+                </a>
+                <button class="md:hidden text-white p-2 mobile-menu-btn" aria-label="Abrir menú">
+                    <span class="material-symbols-outlined text-[28px]">menu</span>
+                </button>
+            </div>
         </div>
     </header>
     <!-- Main Content -->

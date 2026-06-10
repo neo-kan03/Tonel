@@ -124,31 +124,30 @@
 
 <body class="antialiased selection:bg-secondary-container selection:text-on-secondary-container">
     <!-- TopAppBar -->
-    <header
-        class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm w-full">
+    <header class="bg-[#142132] sticky top-0 z-50 shadow-sm w-full">
         <div
             class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
             <div class="flex items-center gap-3">
                 <img alt="Logotipo Clínica Dental Tornel" class="h-10 w-auto object-contain"
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKAHTVKSBzEmnpCy_fr6caKql0YRvoeOuYKnfhuFZ0IBNn_Y4hsFANwSYOYSdfeYzTDhuIaFNZqEsc2J1A4rWenqVnGpp6OThmH2EF6tYrICqpJ4U2vf_DX7g8KOPOCoQ_oL_TMgPUvWVucgXyXt7g_4szBTpRjWnEHRRHCZUX50XP4EFYpScjdmOHKJgkHdpn8I-HEAa-m-0ibOEHcGa1tuzK6dZVGQDosZ8wzPUcw9J_w6g7nwAioMbREDTvdKCEF_tG1Vj9HOE" />
-                <span class="text-headline-md font-headline-md font-bold text-primary hidden sm:block">Clínica Dental
+                <span class="text-headline-md font-headline-md font-bold text-white hidden sm:block">Clínica Dental
                     Tornel</span>
             </div>
             <nav class="hidden md:flex items-center gap-8">
-                <a class="text-secondary font-bold border-b-2 border-secondary pb-1 text-label-md font-label-md"
+                <a class="text-white font-bold border-b-2 border-white pb-1 text-label-md font-label-md"
                     href="./index.html">Inicio</a>
-                <a class="text-on-surface-variant hover:text-secondary transition-colors text-label-md font-label-md"
+                <a class="text-white/80 hover:text-white transition-colors text-label-md font-label-md"
                     href="./servicios/Index.html">Servicios</a>
-                <a class="text-on-surface-variant hover:text-secondary transition-colors text-label-md font-label-md"
+                <a class="text-white/80 hover:text-white transition-colors text-label-md font-label-md"
                     href="./nosotros/Index.html">La Clínica</a>
             </nav>
             <div class="flex items-center gap-2">
-                <a class="hidden md:flex bg-secondary text-white px-6 py-2.5 rounded-full text-label-md font-label-md hover:opacity-90 transition-opacity items-center gap-2 shadow-md"
+                <a class="hidden md:flex bg-white text-[#142132] px-6 py-2.5 rounded-full text-label-md font-label-md hover:bg-surface-container-low transition-colors items-center gap-2 shadow-md"
                     href="./cita/Index.html">
                     <span class="material-symbols-outlined text-[18px]">calendar_month</span>
                     <span>Pedir Cita</span>
                 </a>
-                <button class="md:hidden text-primary p-2 mobile-menu-btn" aria-label="Abrir menú">
+                <button class="md:hidden text-white p-2 mobile-menu-btn" aria-label="Abrir menú">
                     <span class="material-symbols-outlined text-[28px]">menu</span>
                 </button>
             </div>
@@ -156,7 +155,7 @@
     </header>
     <main>
         <!-- Hero Section -->
-        <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+        <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
             <div class="absolute inset-0 z-0">
                 <img alt="Modern and bright dental clinic room with a comfortable patient chair, advanced dental equipment, and natural light streaming in, creating a calming and professional atmosphere."
                     class="w-full h-full object-cover object-center"
@@ -167,12 +166,8 @@
             <div
                 class="relative z-10 w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop py-20 flex flex-col items-start justify-center">
                 <div class="max-w-2xl text-white">
-                    <span
-                        class="inline-block px-4 py-1.5 rounded-full bg-secondary-container/20 text-secondary-fixed backdrop-blur-sm border border-secondary-fixed/30 text-label-md font-label-md mb-6">
-                        Odontología Avanzada
-                    </span>
                     <h1 class="text-headline-xl font-headline-xl text-white mb-6 leading-tight">
-                        Diseñando sonrisas <span class="inline-block animate-bounce">🦷</span>
+                        Diseñando sonrisas
                     </h1>
                     <p class="text-body-lg font-body-lg text-surface-variant mb-10 max-w-xl">
                         Tu salud dental es nuestra prioridad en Los Dolores, Murcia. Combinamos tecnología de vanguardia
@@ -263,7 +258,7 @@
                                 class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Endodoncia</span>
                         </div>
                         <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:translate-x-2 transition-transform"
-                            href="./servicios/Index.html">
+                            href="./nosotros/Index.html#odontologia">
                             Saber más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                         </a>
                     </div>
@@ -288,7 +283,7 @@
                                 class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant text-xs font-label-md">Infantil</span>
                         </div>
                         <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:translate-x-2 transition-transform"
-                            href="./servicios/Index.html">
+                            href="./nosotros/Index.html#ortodoncia">
                             Saber más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                         </a>
                     </div>
@@ -311,7 +306,7 @@
                                 Guiada</span>
                         </div>
                         <a class="inline-flex items-center gap-2 text-secondary font-label-md text-label-md group-hover:translate-x-2 transition-transform"
-                            href="./servicios/Index.html">
+                            href="./nosotros/Index.html#implantes">
                             Saber más <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
                         </a>
                     </div>
@@ -346,7 +341,9 @@
                                 <div>
                                     <h4 class="text-label-md font-label-md text-on-surface">Teléfono</h4>
                                     <p class="text-body-md font-body-md text-on-surface-variant"><a
-                                            class="hover:text-secondary transition-colors" href="tel:968348564">968 348 564</a> | <a class="hover:text-secondary transition-colors" href="tel:686010557">686 010 557</a></p>
+                                            class="hover:text-secondary transition-colors" href="tel:968348564">968 348
+                                            564</a> | <a class="hover:text-secondary transition-colors"
+                                            href="tel:686010557">686 010 557</a></p>
                                 </div>
                             </div>
                             <div class="flex items-start gap-4">
@@ -368,12 +365,17 @@
                     </div>
                     <div
                         class="rounded-2xl overflow-hidden h-[400px] shadow-lg border border-outline-variant/20 relative bg-surface-container">
-                        <!-- Placeholder for Map - replacing with an abstract representation for design purposes -->
-                        <div class="absolute inset-0 bg-primary-fixed-dim/20 flex items-center justify-center flex-col">
-                            <span class="material-symbols-outlined text-[48px] text-primary/40 mb-2">map</span>
-                            <span class="text-label-md font-label-md text-primary/60"
-                                data-location="Los Dolores, Murcia">Mapa de Los Dolores, Murcia</span>
-                        </div>
+                        <!-- Mapa Interactivo Google Maps -->
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Calle%20Mayor%2C%20102%2C%20Los%20Dolores%2C%2030011%20Murcia&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            frameborder="0" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            aria-hidden="false" 
+                            tabindex="0">
+                        </iframe>
                     </div>
                 </div>
             </div>
@@ -425,9 +427,11 @@
     </div>
     <!-- Mobile Menu Overlay -->
     <div id="mobile-menu" class="fixed inset-0 bg-surface z-[100] hidden flex-col">
-        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 border-b border-outline-variant/30">
+        <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 border-b border-outline-variant/30">
             <div class="flex items-center gap-2 text-primary">
-                <span class="material-symbols-outlined text-secondary text-[28px]" style="font-variation-settings: 'FILL' 1;">dentistry</span>
+                <span class="material-symbols-outlined text-secondary text-[28px]"
+                    style="font-variation-settings: 'FILL' 1;">dentistry</span>
                 <span class="font-headline-md font-bold text-lg">Clínica Dental Tornel</span>
             </div>
             <button id="close-menu" class="text-primary p-2" aria-label="Cerrar menú">
@@ -435,10 +439,16 @@
             </button>
         </div>
         <nav class="flex flex-col items-center justify-center flex-grow gap-8 p-6">
-            <a href="./index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Inicio</a>
-            <a href="./servicios/Index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Servicios</a>
-            <a href="./nosotros/Index.html" class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">La Clínica</a>
-            <a href="./cita/Index.html" class="mt-6 bg-secondary text-white px-10 py-4 rounded-full text-headline-md font-headline-md shadow-md">Pedir Cita</a>
+            <a href="./index.html"
+                class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Inicio</a>
+            <a href="./servicios/Index.html"
+                class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">Servicios</a>
+            <a href="./nosotros/Index.html"
+                class="text-headline-lg font-headline-lg text-on-surface hover:text-secondary transition-colors">La
+                Clínica</a>
+            <a href="./cita/Index.html"
+                class="mt-6 bg-secondary text-white px-10 py-4 rounded-full text-headline-md font-headline-md shadow-md">Pedir
+                Cita</a>
         </nav>
     </div>
     <script>
